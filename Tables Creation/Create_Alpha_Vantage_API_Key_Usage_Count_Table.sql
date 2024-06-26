@@ -5,6 +5,6 @@ CREATE TABLE Alpha_Vantage_API_Key_Usage_Count (
     Used_On_US_Date DATE,
     Count INT DEFAULT 1,
     Created_On DATETIME DEFAULT GETDATE(),
-    Updated_On DATETIME,
+    Updated_On DATETIME DEFAULT GETDATE(),
     CONSTRAINT FK_APIKeyID FOREIGN KEY (API_Key_ID) REFERENCES Alpha_Vantage_API_Keys(API_Key_ID)
 );
